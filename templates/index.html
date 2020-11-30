@@ -1,0 +1,218 @@
+<?php
+include "required.php";
+include "db_connect.php";
+
+error_reporting(0);
+?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HRM Services</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="robots" content="all,follow">
+    <!-- Price Slider Stylesheets -->
+    <link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/directory/1-6/vendor/nouislider/nouislider.css">
+    <!-- Google fonts - Playfair Display-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700">
+    <!-- Google fonts - Poppins-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,400i,700">
+    <!-- swiper-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css">
+    <!-- Magnigic Popup-->
+    <link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/directory/1-6/vendor/magnific-popup/magnific-popup.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/directory/1-6/css/style.default.452e11c7.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/directory/1-6/css/custom.0a822280.css">
+    <!-- Favicon-->
+    <script src="https://kit.fontawesome.com/8a81a9a7f0.js" crossorigin="anonymous"></script>
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <style>
+    html {
+  scroll-behavior: smooth;
+}
+    </style>
+  </head>
+  <body style="padding-top: 72px;">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+</style>
+    <style>
+        .hungry{
+        
+          font-family: 'Anton', sans-serif;
+          color: #FF5E5E;
+        }
+    </style>
+<nav class="navbar navbar-expand-lg fixed-top shadow navbar-light bg-white">
+        <div class="container-fluid">
+          <div class="d-flex align-items-center"><h3 class="hungry">HRM Services</h3>
+           
+          </div>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+          <!-- Navbar Collapse -->
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            
+            <ul class="navbar-nav ml-auto">
+              <a class="nav-link active" href="/" >
+                   Homepage</a>
+                <div class="dropdown-menu" aria-labelledby="homeDropdownMenuLink"><a class="dropdown-item" href="https://demo.bootstrapious.com/directory/1-6/index.html">Rooms</a><a class="dropdown-item" href="https://demo.bootstrapious.com/directory/1-6/index-2.html">Restaurants</a><a class="dropdown-item" href="https://demo.bootstrapious.com/directory/1-6/index-3.html">Travel</a><a class="dropdown-item" href="https://demo.bootstrapious.com/directory/1-6/index-4.html">Real Estate <span class="badge badge-info-light ml-1 mt-n1">New</span></a></div>
+              </li>
+              <!-- Megamenu-->
+
+              <!-- /Megamenu end-->
+             
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="docsDropdownMenuLink">
+
+                </div>
+              </li>
+              <li class="nav-item mt-3 mt-lg-0 ml-lg-3 d-lg-none d-xl-inline-block"><a class="btn btn-primary" href="logout">Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <header class="header">
+    <section class="py-6">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-8">
+            <h2 class="text-primary">HRM Household ServIces</h2>
+            <h2>OUR SERVICES</h2>
+          </div>
+          <div class="col-md-4 d-lg-flex align-items-center justify-content-end"></div>
+        </div>
+        <div class="swiper-container guides-slider mx-n2 pt-3">
+          <!-- Additional required wrapper-->
+          <div class="swiper-wrapper pb-5">
+            <!-- Slides-->
+            <div class="swiper-slide h-auto px-2">
+              <div class="card card-poster gradient-overlay hover-animate mb-4 mb-lg-0"><a class="tile-link" href="/home"></a><img class="bg-image" src="https://images.pexels.com/photos/3551230/pexels-photo-3551230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image">
+                <div class="card-body overlay-content">
+                  <h6 class="card-title text-shadow text-uppercase">Home</h6>
+                  <p class="card-text text-sm">Full Home Cleaning</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide h-auto px-2">
+              <div class="card card-poster gradient-overlay hover-animate mb-4 mb-lg-0"><a class="tile-link" href="/rooms"></a><img class="bg-image" src="https://images.pexels.com/photos/892618/pexels-photo-892618.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image">
+                <div class="card-body overlay-content">
+                  <h6 class="card-title text-shadow text-uppercase">Rooms</h6>
+                  <p class="card-text text-sm">Full Room Cleaning</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide h-auto px-2">
+              <div class="card card-poster gradient-overlay hover-animate mb-4 mb-lg-0"><a class="tile-link" href="/sofa"></a><img class="bg-image" src="https://images.pexels.com/photos/1907784/pexels-photo-1907784.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image">
+                <div class="card-body overlay-content">
+                  <h6 class="card-title text-shadow text-uppercase">Sofa</h6>
+                  <p class="card-text text-sm">Full Sofa Cleaning</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide h-auto px-2">
+              <div class="card card-poster gradient-overlay hover-animate mb-4 mb-lg-0"><a class="tile-link" href="/kitchen"></a><img class="bg-image" src="https://images.pexels.com/photos/1581384/pexels-photo-1581384.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image">
+                <div class="card-body overlay-content">
+                  <h6 class="card-title text-shadow text-uppercase">Kitchen</h6>
+                  <p class="card-text text-sm">Full Kitchen Cleaning</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide h-auto px-2">
+              <div class="card card-poster gradient-overlay hover-animate mb-4 mb-lg-0"><a class="tile-link" href="/bathroom"></a><img class="bg-image" src="https://images.pexels.com/photos/271631/pexels-photo-271631.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image">
+                <div class="card-body overlay-content">
+                  <h6 class="card-title text-shadow text-uppercase">Bathroom</h6>
+                  <p class="card-text text-sm">Full Bathroom Cleaning</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide h-auto px-2">
+              <div class="card card-poster gradient-overlay hover-animate mb-4 mb-lg-0"><a class="tile-link" href="/toilet"></a><img class="bg-image" src="https://images.pexels.com/photos/3634742/pexels-photo-3634742.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image">
+                <div class="card-body overlay-content">
+                  <h6 class="card-title text-shadow text-uppercase">Toilet</h6>
+                  <p class="card-text text-sm">Full Toilet Cleaning</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide h-auto px-2">
+              <div class="card card-poster gradient-overlay hover-animate mb-4 mb-lg-0"><a class="tile-link" href="/carpet"></a><img class="bg-image" src="https://images.pexels.com/photos/2580426/pexels-photo-2580426.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image">
+                <div class="card-body overlay-content">
+                  <h6 class="card-title text-shadow text-uppercase">Carpet</h6>
+                  <p class="card-text text-sm">Full Carpet Cleaning</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide h-auto px-2">
+              <div class="card card-poster gradient-overlay hover-animate mb-4 mb-lg-0"><a class="tile-link" href="/car"></a><img class="bg-image" src="https://images.pexels.com/photos/457418/pexels-photo-457418.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image">
+                <div class="card-body overlay-content">
+                  <h6 class="card-title text-shadow text-uppercase">Car</h6>
+                  <p class="card-text text-sm">Full Car Cleaning</p>
+                </div>
+              </div>
+            </div>
+            
+
+
+
+           
+         
+          </div>
+          <div class="swiper-pagination d-md-none"> </div>
+        </div>
+      </div>
+    </section>
+
+   
+    <!-- JavaScript files-->
+    <script>
+      // ------------------------------------------------------- //
+      //   Inject SVG Sprite - 
+      //   see more here 
+      //   https://css-tricks.com/ajaxing-svg-sprite/
+      // ------------------------------------------------------ //
+      function injectSvgSprite(path) {
+      
+          var ajax = new XMLHttpRequest();
+          ajax.open("GET", path, true);
+          ajax.send();
+          ajax.onload = function(e) {
+          var div = document.createElement("div");
+          div.className = 'd-none';
+          div.innerHTML = ajax.responseText;
+          document.body.insertBefore(div, document.body.childNodes[0]);
+          }
+      }    
+      // to avoid CORS issues when viewing using file:// protocol, using the demo URL for the SVG sprite
+      // use your own URL in production, please :)
+      // https://demo.bootstrapious.com/directory/1-0/icons/orion-svg-sprite.svg
+      //- injectSvgSprite('${path}icons/orion-svg-sprite.69651a96.svg'); 
+      injectSvgSprite('https://demo.bootstrapious.com/directory/1-4/icons/orion-svg-sprite.svg'); 
+      
+    </script>
+    <!-- jQuery-->
+    <script src="https://d19m59y37dris4.cloudfront.net/directory/1-6/vendor/jquery/jquery.min.js"></script>
+    <!-- Bootstrap JS bundle - Bootstrap + PopperJS-->
+    <script src="https://d19m59y37dris4.cloudfront.net/directory/1-6/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Magnific Popup - Lightbox for the gallery-->
+    <script src="https://d19m59y37dris4.cloudfront.net/directory/1-6/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <!-- Smooth scroll-->
+    <script src="https://d19m59y37dris4.cloudfront.net/directory/1-6/vendor/smooth-scroll/smooth-scroll.polyfills.min.js"></script>
+    <!-- Bootstrap Select-->
+    <script src="https://d19m59y37dris4.cloudfront.net/directory/1-6/vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <!-- Object Fit Images - Fallback for browsers that don't support object-fit-->
+    <script src="https://d19m59y37dris4.cloudfront.net/directory/1-6/vendor/object-fit-images/ofi.min.js"></script>
+    <!-- Swiper Carousel                       -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script>
+    <script src="https://d19m59y37dris4.cloudfront.net/directory/1-6/vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="/static/js/demo.36f8799a.js"></script>
+    <!-- Main Theme JS file    -->
+    <script src="/static/js/theme.55f8348b.js"></script>
+  </body>
+</html>

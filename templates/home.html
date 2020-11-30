@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="container">
+<form action = "/home" method = "POST" autocomplete="off">
+  {% csrf_token %}
+  <div class="form-group my-4">
+    <label for="exampleInputEmail1">Username</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" name = "username" value = "{{request.user}}" placeholder = "1234567890" aria-describedby="emailHelp" readonly required>
+  </div>
+  <div class="form-group my-4">
+    <label for="exampleInputEmail1">Full Name</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" name = "fname" value = "{{request.user.first_name}} {{request.user.last_name}}" placeholder = "First Name" aria-describedby="emailHelp" readonly required>
+  </div>
+  <div class="form-group my-4">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" name = "email" value = "{{request.user.email}}" placeholder = "name@example.com" aria-describedby="emailHelp" readonly required>
+  </div>
+  <div class="form-group my-4">
+    <label for="exampleInputEmail1">Total Room In House If Not Type 0</label>
+    <input type="number" class="form-control" id="exampleInputEmail1" name = "troom" placeholder = "3" aria-describedby="emailHelp" required>
+  </div>
+  <div class="form-group my-4">
+    <label for="exampleInputEmail1">Total Balcony In House If Not Type 0</label>
+    <input type="number" class="form-control" id="exampleInputEmail1" name = "tbal" placeholder = "1" aria-describedby="emailHelp" required>
+  </div>
+  <div class="form-group my-4">
+    <label for="exampleInputEmail1">Total Chimney In House If Not Type 0</label>
+    <input type="number" class="form-control" id="exampleInputEmail1" name = "tchimney" placeholder = "2" aria-describedby="emailHelp" required>
+  </div>
+  <div class="form-group my-4">
+    <label for="exampleInputEmail1">Total Seats On Sofa If Not Type 0</label>
+    <input type="number" class="form-control" id="exampleInputEmail1"  name = "tsofa" placeholder = "6" aria-describedby="emailHelp" required>
+  </div>
+  <div class="form-group my-4">
+    <label for="exampleInputEmail1">Total Carpet In House If Not Type 0</label>
+    <input type="number" class="form-control" id="exampleInputEmail1"  name = "tcarpet" placeholder = "0" aria-describedby="emailHelp" required>
+  </div>
+  <div class="form-group my-4">
+    <label for="exampleInputEmail1">Pincode</label>
+    <input type="number" class="form-control" id="exampleInputEmail1"  name = "pincode" placeholder = "123456" aria-describedby="emailHelp" required>
+  </div>
+  <div class="form-group my-4">
+    <label for="exampleInputEmail1">Full Address</label>
+    <textarea type="email" class="form-control" id="exampleInputEmail1" name = "address" placeholder = "Full Address" aria-describedby="emailHelp" required></textarea>
+  </div>
+  <div class="form-group my-4">
+    <label for="exampleInputEmail1">Phone Number(1) With Country Code</label>
+    <input type="number" class="form-control" id="exampleInputEmail1"  name = "ph1" placeholder = "+911234567890" maxlength="12" aria-describedby="emailHelp" required>
+  </div>
+  <div class="form-group my-4">
+    <label for="exampleInputEmail1">Phone Number(2) With Country Code</label>
+    <input type="number" class="form-control" id="exampleInputEmail1"  name = "ph2" placeholder = "+911234567890" maxlength="12"aria-describedby="emailHelp">
+  </div>
+  <div class="form-group my-4">
+    <label for="exampleInputEmail1">Any Other Facility Needed</label>
+    <textarea type="text" class="form-control" id="exampleInputEmail1" name = "otser" id = "otser" placeholder = "Male, Female Worker Needed..."  aria-describedby="emailHelp"></textarea>
+  </div>
+  <button id = "demo" type="submit" onclick='document.getElementById("demo").innerHTML = "Loading.."' class="btn btn-primary">Order Now</button>
+</form>
+<br>
+
+</div>
+{% endblock body %}
